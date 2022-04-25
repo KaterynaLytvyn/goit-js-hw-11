@@ -17,7 +17,8 @@ loadMoreBtn.addEventListener('click', onClick)
 async function onSubmit(event) {
     event.preventDefault()
     loadMoreBtn.style.visibility = 'hidden'
-    galleryContainer.innerHTML='';
+    galleryContainer.innerHTML=''
+    page_num = 1
 
     const response = await loadAndRenderPictures (searchForm.elements.searchQuery.value, page_num)
 
